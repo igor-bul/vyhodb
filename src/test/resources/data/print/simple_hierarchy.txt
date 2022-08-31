@@ -1,0 +1,16 @@
+    {} id=0
+        "group2root" ←
+            {Name="All Groups"} id=523
+                "parent_group" ←
+                    {Name="Group 1"} id=534
+                        "parent_group" ←
+                            {Name="Group 1.1"} id=545
+                                "product2group" ←
+                                    {Name="Product A", Price=12.34} id=578
+                            {Name="Group 1.2"} id=556
+                                "product2group" ←
+                                    {Name="Product B", Price=5.23} id=589
+                                    {Name="Product C", Price=26.87} id=600
+                    {Name="Group 2"} id=567
+                        "product2group" ←
+                            {Name="Product D", Price=99.99} id=611

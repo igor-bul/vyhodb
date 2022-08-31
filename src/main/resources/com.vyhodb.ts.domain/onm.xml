@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<class name="com.vyhodb.ts.domain.Root" id="id" isChanged="isChanged">
+    	<fieldSet>
+			<field name="projectCount" fieldName="ProjectCount" />
+			<field name="employeeCount" fieldName="EmployeeCount" />
+			<field name="firstActivityDate" fieldName="FirstActivityDate" />
+			<field name="lastActivityDate" fieldName="LastActivityDate" />
+		</fieldSet>
+		
+		<childrenSet>
+			<children name="activityTypes" linkName="all_activity_types" />
+			<children name="roles" linkName="all_roles" />
+			<children name="employees" linkName="all_employees" />
+			<children name="projects" linkName="all_projects" />
+			<children name="topProjects" linkName="top_projects" />
+		</childrenSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.Project" id="id" isChanged="isChanged">
+    	<fieldSet>
+			<field name="number" fieldName="Number" />
+			<field name="name" fieldName="Name" />
+			<field name="description" fieldName="Description" />
+			<field name="totalCost" fieldName="TotalCost" />
+			<field name="totalTime" fieldName="TotalTime" />
+		</fieldSet>
+
+		<parentSet>
+			<parent name="parentProject" linkName="parent_project" />
+			<parent name="root" linkName="all_projects" />
+			<parent name="rootTopProject" linkName="top_projects" />
+		</parentSet>
+		
+		<childrenSet>
+			<children name="childProjects" linkName="parent_project" />
+			<children name="activities" linkName="activity2project" />
+			<children name="assignments" linkName="assignment2project" />
+			<children name="unapprovedActivities" linkName="unapproved_activity2project" />
+			<children name="approvedActivities" linkName="approved_activity2project" />
+		</childrenSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.Employee" id="id" isChanged="isChanged">
+    	<fieldSet>
+			<field name="number" fieldName="Number" />
+			<field name="firstName" fieldName="FirstName" />
+			<field name="lastName" fieldName="LastName" />
+		</fieldSet>
+
+		<parentSet>
+			<parent name="role" linkName="employee2role" />
+			<parent name="root" linkName="all_employees" />
+		</parentSet>
+		
+		<childrenSet>
+			<children name="activities" linkName="activity2employee" />
+			<children name="assignments" linkName="assignment2employee" />
+		</childrenSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.Role" id="id" isChanged="isChanged" isDeleted="isDeleted" >
+    	<fieldSet>
+			<field name="name" fieldName="Name" />
+			<field name="hourRate" fieldName="HourRate" />
+		</fieldSet>
+		<parentSet>
+			<parent name="root" linkName="all_roles" />
+		</parentSet>
+		<childrenSet>
+			<children name="employees" linkName="employee2role" />
+		</childrenSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.Assignment" id="id" isChanged="isChanged">
+		<parentSet>
+			<parent name="employee" linkName="assignment2employee" />
+			<parent name="project" linkName="assignment2project" />
+		</parentSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.ActivityType" id="id" isChanged="isChanged">
+    	<fieldSet>
+			<field name="name" fieldName="Name" />
+			<field name="description" fieldName="Description" />
+		</fieldSet>
+		<parentSet>
+			<parent name="root" linkName="all_activity_types" />
+		</parentSet>
+		<childrenSet>
+			<children name="activities" linkName="activity2activity_type" />
+		</childrenSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.ActivityHistory" id="id" isChanged="isChanged">
+    	<fieldSet>
+			<field name="actionType" fieldName="ActionType" />
+			<field name="actionDateTime" fieldName="ActionDateTime" />
+		</fieldSet>
+		
+		<parentSet>
+			<parent name="activity" linkName="activity_history2activity" />
+		</parentSet>
+	</class>
+	
+	<class name="com.vyhodb.ts.domain.Activity" id="id" isChanged="isChanged">
+    	<fieldSet>
+			<field name="activityDate" fieldName="ActivityDate" />
+			<field name="time" fieldName="Time" />
+			<field name="cost" fieldName="Cost" />
+			<field name="isApproved" fieldName="Approved" />
+		</fieldSet>
+		
+		<parentSet>
+			<parent name="activityType" linkName="activity2activity_type" />
+			<parent name="project" linkName="activity2project" />
+			<parent name="unapprovedProject" linkName="unapproved_activity2project" />
+			<parent name="approvedProject" linkName="approved_activity2project" />
+			<parent name="employee" linkName="activity2employee" />
+		</parentSet>
+		
+		<childrenSet>
+			<children name="activityHistories" linkName="activity_history2activity" />
+		</childrenSet>
+	</class>
+	
+</metadata>

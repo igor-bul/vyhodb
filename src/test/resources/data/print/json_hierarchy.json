@@ -1,0 +1,56 @@
+
+{
+    "id":0,
+    "group2root":[
+        {
+            "id":523,
+            "Name":"All Groups",
+            "parent_group":[
+                {
+                    "id":534,
+                    "Name":"Group 1",
+                    "parent_group":[
+                        {
+                            "id":545,
+                            "Name":"Group 1.1",
+                            "product2group":[
+                                {
+                                    "id":578,
+                                    "Name":"Product A",
+                                    "Price":12.34
+                                }
+                            ]
+                        },
+                        {
+                            "id":556,
+                            "Name":"Group 1.2",
+                            "product2group":[
+                                {
+                                    "id":589,
+                                    "Name":"Product B",
+                                    "Price":5.23
+                                },
+                                {
+                                    "id":600,
+                                    "Name":"Product C",
+                                    "Price":26.87
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":567,
+                    "Name":"Group 2",
+                    "product2group":[
+                        {
+                            "id":611,
+                            "Name":"Product D",
+                            "Price":99.99
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

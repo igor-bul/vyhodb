@@ -1,0 +1,30 @@
+This product includes software developed by the following third parties:
+
+Apachi Commons CLI
+Command line parser is provided by Apache Software Foundation,
+which is open source software.  The original software and related information 
+is available at http://commons.apache.org/proper/commons-cli/
+
+Kryo
+Java serialization/deserialization library, which is open source software,
+ is provided by Esoteric Software and Nathan Sweet. The original software 
+and related information is available at https://github.com/EsotericSoftware/kryo
+
+slf4j
+Java logging library, which is open source software, is provided by QOS.ch. 
+The original software and related information is available 
+at http://www.slf4j.org/
+
+cron4j
+Java cron expression parser library, which is open source software, is provided
+by Sauron Software. The original software and related information is available 
+at http://www.sauronsoftware.it/projects/cron4j/
+
+fastutil
+Java primitive collection library, which is open source software, is provided by
+Sebastiano Vigna. The original software and related information is available 
+at http://fastutil.di.unimi.it/
+
+objenesis
+objenesis library is used by Kryo and provided by Objenesis developer group.
+The original software and related information is available at http://objenesis.org/

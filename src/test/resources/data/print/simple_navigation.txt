@@ -1,0 +1,13 @@
+    {} id=0
+        "order2root" ←
+            {Customer="Customer 1", Date="Mon May 18 00:00:00 BRT 2015"} id=556
+                "item2order" ←
+                    {Cost=62.25, Count=5} id=589
+                        "item2product" →
+                            {Name="Product 1", Price=12.45} id=523
+                    {Cost=14569.90, Count=10} id=600
+                        "item2product" →
+                            {Name="Product 2", Price=1456.99} id=534
+                    {Cost=884.85, Count=15} id=611
+                        "item2product" →
+                            {Name="Product 3", Price=58.99} id=545

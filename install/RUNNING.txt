@@ -1,0 +1,69 @@
+            ===================================================
+            Running the vyhodb 0.9.0 database management system
+            ===================================================
+
+vyhodb 0.9.0 requires the Java Standard Edition Runtime
+Environment (JRE) version 1.7.0_45 or later.
+
+==================================
+Running With JRE 1.7.0_45 or later
+==================================
+
+(1) Download and Install the Java SE Runtime Environment (JRE)
+
+(1.1) Download the Java SE Runtime Environment (JRE),
+      release version 1.7.0_45 or later.
+
+(1.2) Install the JRE according to the instructions included with the
+      release.
+
+      You may also use the full JDK rather than just the JRE. In this
+      case set you have to configure your environment variables
+      differently - see below.
+
+
+(2) Download and Install the vyhodb
+
+(2.1) Download vyhodb binary distribution from http://www.vyhodb.com/ and 
+      unpack it into a convenient location so that the distribution resides in
+      its own directory.
+
+
+(3) Configuring
+
+      vyhodb itself is a Java application and does not use environment variables,
+      but the startup script and other command line utilities use them.
+      Currently, there is only one environment variable, which needs to be
+      configured: JRE_HOME
+
+(3.1) JRE_HOME
+
+      This environment variable specifies location of JRE that should be used 
+      to start vyhodb. You need to set it by yourself in one of the following
+      scripts:
+
+      bin-sh\set-env.sh     (Linux)
+      
+      Example:
+
+      JRE_HOME=/home/igor/jdk1.7.0_79/jre       (Linux)
+      
+(3.2) Further information about configuring and running vyhodb can be found in
+      the documentation included here, as well as on the vyhodb web site:
+
+      http://www.vyhodb.com/
+
+
+(4) Start Up vyhodb
+
+(4.1) vyhodb can be started by executing one of the following commands:
+
+      vdb-start.sh          (Linux)
+
+
+(5) Shut Down vyhodb
+
+(5.1) vyhodb can be shut down by stopping JVM process (Ctrl^C) or executing 
+      one of the commands:
+
+      bin-sh\vdb-close-remote.sh -host=localhost -port4666      (Linux)

@@ -1,0 +1,13 @@
+    {} id=0
+        "order2root" ←
+            {Customer="Customer 1"} id=556
+                "item2order" ←
+                    {Cost=62.25} id=589
+                        "item2product" →
+                            {Name="Product 1"} id=523
+                    {Cost=14569.90} id=600
+                        "item2product" →
+                            {Name="Product 2"} id=534
+                    {Cost=884.85} id=611
+                        "item2product" →
+                            {Name="Product 3"} id=545
