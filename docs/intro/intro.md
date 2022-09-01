@@ -2,13 +2,13 @@
 
 This article gives brief introduction into vyhodb. 
 
-For practicing with vyhodb API use [Getting Started](docs/vyhodb_getting_started.en.pdf) document.
+For practicing with vyhodb API use [Getting Started](/docs/vyhodb_getting_started.en.pdf) document.
 
-For getting more information about vyhodb API use [Developer's Guide](docs/vyhodb_dev_guide.en.pdf).
+For getting more information about vyhodb API use [Developer's Guide](/docs/vyhodb_dev_guide.en.pdf).
 
-For Function API details use [Functions API Reference](docs/vyhodb_functions_reference.en.pdf).
+For Function API details use [Functions API Reference](/docs/vyhodb_functions_reference.en.pdf).
 
-For vyhodb administration and configuring see [Administrator's Guide](docs/vyhodb_admin_guide.en.pdf).
+For vyhodb administration and configuring see [Administrator's Guide](/docs/vyhodb_admin_guide.en.pdf).
 
 ## Network model
 
